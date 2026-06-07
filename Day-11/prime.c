@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+int isPRIME(int n)
+{
+    int i;
+
+    if(n <= 1)
+    return 0;
+
+    for( i = 2; i < n; i++)
+    {
+        if(n % i == 0)
+        return 0;
+    }
+    return 1;
+}
+int main()
+{
+    int num;
+
+    printf("enter a number: ");
+    scanf("%d", &num);
+
+    if (isPRIME(num))
+        printf("prime number");
+        
+    else 
+        printf("not prime number");
+
+        return 0;
+}
+       
